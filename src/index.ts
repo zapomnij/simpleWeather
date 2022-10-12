@@ -12,7 +12,7 @@ let args: string[] = process.argv.slice(1);
 if (args.length < 5) {
 	try {
 		// Read configuration if parameters hasn't been passed in cl arguments
-		const config_path = process.env.HOME + path.sep + ".simpleWeather.json";
+		const config_path = (process.platform == 'win32') ? path.join(process.env.appdata, 'simpleWeather', 'sWea.json') : path.join(process.env.HOME, ".config", "sWea.json");
 		const data = JSON.parse(
 			fs.readFileSync(config_path)
 		);

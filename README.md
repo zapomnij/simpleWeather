@@ -23,7 +23,7 @@ Try testing simpleWeather with that information:
 npx sWea <latitude> <longitude> <timezone> <refresh time in seconds>
 ```
 
-We recommend to save simpleWeather configuration in `~/.simpleWeather.json`:
+We recommend to save simpleWeather configuration in `~/.config/sWea.json` (for Unix-based, Unix-like OSes) or `%appdata%\simpleWeather\sWea.json` (for Windows):
 ```json
 {
   "latitude": "<your latitude>",
