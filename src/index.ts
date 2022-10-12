@@ -1,14 +1,15 @@
 #!/usr/bin/env node
 
+// Import async `app` function from display.ts
 import {app} from "./display";
 
 const fs = require('fs');
 const path = require('path');
 
-debugger;
 // Get args
-let args: string[] = process.argv.slice(1);
+let args: Array<string> = process.argv.slice(1);
 
+// If no args, read configuration
 if (args.length < 5) {
 	try {
 		// Read configuration if parameters hasn't been passed in cl arguments
@@ -17,6 +18,7 @@ if (args.length < 5) {
 			fs.readFileSync(config_path)
 		);
 
+		// Reassign args string array
 		args = [];
 		// Put parameters in arguments variable
 		args.push("", data.latitude, data.longitude, data.timezone, data.refresh);
