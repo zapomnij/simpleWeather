@@ -34,7 +34,7 @@ We recommend to save simpleWeather configuration in `~/.config/sWea.json` (for U
   "refresh": "<refresh time>"
 }
 ```
-and then you could run simpleWeather just like that:
+and then you can run simpleWeather just like that:
 ```shell
 npx sWea
 ```
